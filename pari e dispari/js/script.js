@@ -40,8 +40,6 @@ if (sumIsDivisible == 'true' && userEvenOdd == 'pari') {
     console.log('Hai vinto');
 } else if (sumIsDivisible != 'true' && userEvenOdd == 'dispari') {
     console.log('Hai vinto');
-} else if (sumIsDivisible == 'true' && userEvenOdd == 'dispari') {
-    console.log('Hai perso');
 } else {
     console.log('Hai perso');  
 }

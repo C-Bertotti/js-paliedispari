@@ -1,24 +1,17 @@
 // Chiedere all’utente di inserire una parola
 var userWord = prompt('Inserisci una parola');
 
-// Creo le variabili per la parola analizzata;
-var wordLtoR = [];
-var wordRtoL = [];
 // Creare una funzione per capire se la parola inserita è palindroma
 function isPalindrome(word) {
     //Creo i cicli che mi servono per analizzare la parola
     // da sx verso dx
-    for ( var y = userWord.length; y > 0; y-- ) {
-        wordLtoR.push(userWord[y]);
-    }
-
-    // da dx verso sx
-    for ( var i = 0; i < userWord.length; i++ ) {
-        wordRtoL.push(userWord[i]);
+    var wordRtoL = "";
+    for ( var y = userWord.length - 1; y >= 0; y-- ) {
+        wordRtoL += userWord[y];
     }
 
     //Ritorno un risultato
-    if (wordLtoR == wordRtoL) {
+    if (userWord == wordRtoL) {
         return 'true';
     }
 }
@@ -27,7 +20,7 @@ function isPalindrome(word) {
 var result = isPalindrome(userWord);
 
 //Stampo il risultato
-if (result = 'true') {
+if (result == 'true') {
     console.log('La parola ' + userWord + ' è palindroma');
 } else {
     console.log('La parola ' + userWord + ' NON è palindroma, riprova.')

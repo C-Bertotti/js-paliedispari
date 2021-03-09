@@ -8,7 +8,7 @@ console.log('Hai scelto ' + userEvenOdd + '.');
 // inserisce  un numero da 1 a 5.
 do {
     var userNumber = parseInt(prompt('Inserisci un numero da 1 a 5.'));
-} while ( isNaN(userNumber) );
+} while ( isNaN(userNumber) || userNumber < 1 || userNumber > 5 );
 
 console.log('Il numero che hai scelto è ' + userNumber + '.');
 
